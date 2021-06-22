@@ -16,11 +16,13 @@ export const hydrate = (plant) => {
 };
 
 export const feed = (plant) => {
-  // return {
-  //   ...plant,
-  //   soil: (plant.soil || 0) + 1
-  // }
-  return "ggod fail";
+  return {
+    ...plant,
+    soil: (plant.soil || 0) + 1
+  }
+}
+export const giveLight =(plant) =>{
+  return "oh yeah";
 }
 // export const changePlantState = (plant, property) => {
 //   return 0;

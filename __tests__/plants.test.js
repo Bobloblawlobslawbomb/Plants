@@ -18,9 +18,16 @@ describe('hydrate', () => {
 
 describe('feed', () => {
   test("it should increase the plant's food by 1", () => {
-    const initialState = { water: 2, soil: 5, light: 3 }
+    const initialState = { water: 2, soil: 4, light: 3 }
     const myPlant = plants.storeState(initialState);
     expect(myPlant(plants.feed)).toMatchObject({ water: 2, soil: 5, light: 3 });
+  });
+});
+describe('giveLight', () => {
+  test("it should increase the plant's light by 1", () => {
+    const initialState = { water: 2, soil: 4, light: 3 }
+    const myPlant = plants.storeState(initialState);
+    expect(myPlant(plants.giveLight)).toMatchObject({ water: 2, soil: 4, light: 4 });
   });
 });
 
