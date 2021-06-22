@@ -15,6 +15,13 @@ export const hydrate = (plant) => {
   }
 };
 
+export const feed = (plant) => {
+  // return {
+  //   ...plant,
+  //   soil: (plant.soil || 0) + 1
+  // }
+  return "ggod fail";
+}
 // export const changePlantState = (plant, property) => {
 //   return 0;
 //   // return {

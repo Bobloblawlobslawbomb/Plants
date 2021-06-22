@@ -8,15 +8,21 @@ describe('Plant', () => {
   });
 });
 
-
-
 describe('hydrate', () => {
   test("should increase plant's water by 1", () => {
     const initialState = { water: 2, soil: 4, light: 3 }
     const myPlant = plants.storeState(initialState);
     expect(myPlant(plants.hydrate)).toMatchObject({ water: 3, soil: 4, light: 3 });
-  })
-})
+  });
+});
+
+describe('feed', () => {
+  test("it should increase the plant's food by 1", () => {
+    const initialState = { water: 2, soil: 5, light: 3 }
+    const myPlant = plants.storeState(initialState);
+    expect(myPlant(plants.feed)).toMatchObject({ water: 2, soil: 5, light: 3 });
+  });
+});
 
 // describe('Character', () => {
 //   test('should make an instance of new character', () => {
