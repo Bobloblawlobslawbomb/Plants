@@ -8,6 +8,15 @@ describe('Plant', () => {
   });
 });
 
+describe('hydrate', () => {
+  test("should increase plant's water by 1", () => {
+    const initialState = { water: 2, soil: 4, light: 3 }
+    const myPlant = plants.storeState(initialState);
+    const myPlantPlusWater = plants.hydrate();
+    expect(myPlantPlusWater).toMatchObject({ water: 3, soil: 4, light: 3 });
+  })
+})
+
 // describe('Character', () => {
 //   test('should make an instance of new character', () => {
 //     const initialState = { brawn: 2, brains: 4, beauty: 3 }
