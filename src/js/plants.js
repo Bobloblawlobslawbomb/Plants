@@ -7,6 +7,14 @@ export const storeState = (initialState = {}) => {
   }
 }
 
+const changePlantState = (plant, property) => {
+  return {
+    ...plant,
+    [property]: (plant[property] || 0) + 1
+  }
+  return "ok";
+}
+
 export const hydrate = (plant) => {
   console.log(plant);
   return {
@@ -21,12 +29,15 @@ export const feed = (plant) => {
     soil: (plant.soil || 0) + 1
   }
 }
+
 export const giveLight = (plant) => {
   return {
     ...plant,
     light: (plant.light || 0) + 1
   }
 }
+
+
 // export const changePlantState = (plant, property) => {
 //   return 0;
 //   // return {

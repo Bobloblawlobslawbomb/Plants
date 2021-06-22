@@ -1,4 +1,4 @@
-import * as plants from '../src/js/plants';
+import * as plantsfile from '../src/js/plantsfile';
 
 describe('Plant', () => {
   test('should make an instance of new plant', () => {
@@ -32,10 +32,10 @@ describe('giveLight', () => {
 });
 
 describe('changePlantState', () => {
-  test("it should change plant state of specified property (water +1)", () => {
+  test("it should change plant state of specified property (+1)", () => {
     const initialState = { water: 2, soil: 4, light: 3 }
     const myPlant = plants.storeState(initialState);
-    expect(myPlant(plants.changePlantState(myPlant, plant.water))).toMatchObject({ water: 3, soil: 4, light: 3 });
+    expect(myPlant(plants.changePlantState(myPlant, myPlant.myPlant.water))).toMatchObject({ water: 3, soil: 4, light: 3 });
   });
 });
 
