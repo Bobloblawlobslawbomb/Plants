@@ -1,6 +1,6 @@
-export const plants = () => {
-  return 0;
-}
+// export const plants = () => {
+//   return 0;
+// }
 
 // export const hydrate = (plant) => {
 //   return {
