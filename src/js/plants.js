@@ -8,11 +8,20 @@ export const storeState = (initialState = {}) => {
 }
 
 export const hydrate = (plant) => {
-  // return {
-  //   ...plant,
-  //   water: (plant.water || 0) + 1
-  return "hi";
-}
+  console.log(plant);
+  return {
+    ...plant,
+    water: (plant.water || 0) + 1
+  }
+};
+
+// export const changePlantState = (plant, property) => {
+//   return 0;
+//   // return {
+//   //   ...plant,
+//   //   [property]: (plant[property] || 0) + 1
+//   // }
+// }
 
 
 
