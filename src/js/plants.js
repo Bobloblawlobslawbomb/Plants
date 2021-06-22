@@ -21,8 +21,11 @@ export const feed = (plant) => {
     soil: (plant.soil || 0) + 1
   }
 }
-export const giveLight =(plant) =>{
-  return "oh yeah";
+export const giveLight = (plant) => {
+  return {
+    ...plant,
+    light: (plant.light || 0) + 1
+  }
 }
 // export const changePlantState = (plant, property) => {
 //   return 0;
